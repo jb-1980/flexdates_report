@@ -15,20 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Newblock block caps.
+ * flexdates_report block settings.
  *
- * @package    block_newblock
- * @copyright  Daniel Neis <danielneis@gmail.com>
+ * @package    block_flexdates_report
+ * @copyright  2015 Joseph Gilgen <gilgenlabs@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $settings->add(new admin_setting_heading('sampleheader',
-                                         get_string('headerconfig', 'block_newblock'),
-                                         get_string('descconfig', 'block_newblock')));
+                                         get_string('headerconfig', 'block_flexdates_report'),
+                                         get_string('descconfig', 'block_flexdates_report')));
 
-$settings->add(new admin_setting_configcheckbox('newblock/foo',
-                                                get_string('labelfoo', 'block_newblock'),
-                                                get_string('descfoo', 'block_newblock'),
+$settings->add(new admin_setting_configcheckbox('flexdates_report/foo',
+                                                get_string('labelfoo', 'block_flexdates_report'),
+                                                get_string('descfoo', 'block_flexdates_report'),
                                                 '0'));

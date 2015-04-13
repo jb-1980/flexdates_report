@@ -17,14 +17,19 @@
 /**
  * Version details
  *
- * @package    block_newblock
+ * @package    block_flexdates_report
  * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2013011300;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->version   = 2015040900;        // The current plugin version (Date: YYYYMMDDXX)
 $plugin->requires  = 2012112900;        // Requires this Moodle version
-$plugin->component = 'block_newblock'; // Full name of the plugin (used for diagnostics)
-$plugin->cron = 300;
+$plugin->component = 'block_flexdates_report'; // Full name of the plugin (used for diagnostics)
+$plugin->cron = 0;
+$plugin->maturity = MATURITY_ALPHA;
+$plugin->release = 'v1.0';
+$plugin->dependencies = array(
+    'local_flexdates'=>ANY_VERSION
+);

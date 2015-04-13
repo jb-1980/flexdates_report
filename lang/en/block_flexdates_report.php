@@ -16,18 +16,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_newblock', language 'en'
+ * Strings for component 'block_flexdates_report', language 'en'
  *
- * @package   block_newblock
- * @copyright Daniel Neis <danielneis@gmail.com>
+ * @package   block_flexdates_report
+ * @copyright 2015 Joseph Gilgen <gilgenlabs@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['blockstring'] = 'Block string';
+$string['coursenottracked'] = 'This course is not<br/>being tracked with<br/>flexdates';
+$string['coursetrackingnotsetup'] = 'Flexdate course tracking<br/>has not been setup<br/>for this course';
 $string['descconfig'] = 'Description of the config section';
 $string['descfoo'] = 'Config description';
+$string['flexdates_report:addinstance'] = 'Add a flexdates_report block';
+$string['flexdates_report:myaddinstance'] = 'Add a flexdates_report block to my moodle';
 $string['headerconfig'] = 'Config section header';
 $string['labelfoo'] = 'Config label';
-$string['newblock:addinstance'] = 'Add a newblock block';
-$string['newblock:myaddinstance'] = 'Add a newblock block to my moodle';
-$string['pluginname'] = 'Newblock';
+$string['pluginname'] = 'Flexdates report';
+$string['tasksmastered']='tasks mastered';
+$string['taskslevel2']='tasks at level 2';
+$string['taskslevel1']='tasks at level 1';
+$string['taskspracticed']='tasks practiced';
+$string['tasksnotstarted']='tasks not started';

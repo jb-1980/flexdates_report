@@ -1,0 +1,72 @@
+.flexdates-report-progress-container{
+  padding:3px;
+}
+
+.flexdates-report-progress-circle{
+  margin:auto;
+  text-align:center;
+}
+
+.flexdates-report-task-level-row{
+  padding:2px;
+}
+
+.flexdates-report-progress-box{
+  color:#FDFDFD;
+  width:14px;
+  height:14px;
+  display:inline-block;
+}
+
+.flexdates-report-progress-cell{
+  color:#FDFDFD;
+  width:14px;
+  height:14px;
+  display:block;
+  float:left;
+  border:1px solid #FFF;
+  border-width:0 1.5px 1px 0;
+}
+
+.flexdates-report-progress-row{
+  display:inline-block;
+}
+
+.flexdates-report-mastered-box{
+  background:#1C758A;
+}
+
+.flexdates-report-level2-box{
+  background:#29ABCA;
+}
+
+.flexdates-report-level1-box{
+  background:#58C4DD;
+}
+
+.flexdates-report-practiced-box{
+  background:#9CDCEB;
+}
+
+.flexdates-report-notstarted-box{
+  background:#DDD;
+}
+
+.flexdates-report-struggling-box{
+  background:#C30202;
+}
+
+.flexdates-report-unit-title{
+  color:#999;
+  border-bottom:thin dotted #999;
+  margin-bottom:4px;
+}
+
+.flexdates-report-unit-container{
+  margin-bottom:6px;
+}
+
+#flexdates-report-toggle-tasks-container{
+  padding:5px;
+  text-align:center;
+}
