@@ -48,10 +48,10 @@ class block_flexdates_report extends block_base {
         }
         if($record = $DB->get_record('local_fd_trackcourse',array('courseid'=>$COURSE->id))){
             if($record->track){
-                $sql = "SELECT ue.timestart 
+                $sql = "SELECT ue.timestart
                           FROM {$CFG->prefix}user_enrolments ue
-                          JOIN {$CFG->prefix}enrol e ON e.id=ue.enrolid 
-                         WHERE e.enrol = 'manual'
+                          JOIN {$CFG->prefix}enrol e ON e.id=ue.enrolid
+                         WHERE (e.enrol = 'manual' OR e.enrol = 'mnet')
                                AND e.courseid = {$COURSE->id}
                                AND ue.userid = {$USER->id};";
                 $enrol_record = $DB->get_record_sql($sql, array(), $strictness=MUST_EXIST);
