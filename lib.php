@@ -41,11 +41,23 @@ function flexdates_report_render_progress_counts($gradeitems){
     foreach($levels as $k=>$v){
         $out.=flexdates_report_render_task_row($k,$v);
     }
-    return html_writer::div($out,'',array("style"=>"display:inline-block;vertical-align:top;text-align:left;"));
+    return html_writer::div($out,'flexdates-report-task-levels')."\n";#,array("class"=>"display:inline-block;vertical-align:top;text-align:left;"));
 }
 
 function flexdates_report_render_progress_cell($mod){
-    return html_writer::div('',"flexdates-report-progress-cell flexdates-report-".$mod->masterylevel."-box");
+    $grade_content = '<div style="text-align:center;width:250px;">
+        <span style="font-size:50px;">'.$mod->grade_str."</span><br/>
+        <span>(".round($mod->grade,1)."/".round($mod->grademax,0).")</span></div>";
+    $grade = html_writer::div($grade_content,'flexdates-report-mod-grade');
+    $feedback = html_writer::div($mod->feedback,'flexdates-report-mod-feedback');
+    $content = html_writer::div($grade."\n".$feedback."\n",'');
+    return html_writer::div('',
+            "flexdates-report-progress-cell flexdates-report-".$mod->masterylevel."-box",
+            array(
+                "id"=>$mod->module.'-'.$mod->instance,
+                "title"=>$mod->name,
+                "data-content"=>$content,
+                ));
 }
 
 function flexdates_clean_data($gradeitems){
@@ -57,7 +69,10 @@ function flexdates_clean_data($gradeitems){
         if($mod = $DB->get_record('course_modules',array('module'=>$module,'instance'=>$instance))){
             $mod->name = $gradeitem->name;
             $mod->grade = $gradeitem->grades->grade;
+            $mod->grade_str = $gradeitem->grades->str_grade;
+            $mod->grademax = $gradeitem->grademax;
             $mod->masterylevel = $gradeitem->grades->masterylevel;
+            $mod->feedback = $gradeitem->grades->str_feedback;
             $mods[$mod->id]=$mod;
         }
     }

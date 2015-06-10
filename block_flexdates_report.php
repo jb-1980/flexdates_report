@@ -74,19 +74,22 @@ class block_flexdates_report extends block_base {
                 
                 $progress_counts = flexdates_report_render_progress_counts($course_grade_data);
                 $mods = flexdates_report_render_progress_cells($COURSE->id,$course_grade_data->grades->items);
-                
+                //print_object($course_grade_data->grades->items);
             $text ='
+<div style="display:none;" id="tmp"></div>
 <div class="flexdates-report-progress-container">
-<div class="flexdates-report-progress-circle">
-'.$grade_graph.'
-</div>
-<div style="text-align:center;">
-'.$progress_counts.'
-</div>'.
+  <div class="row">
+    <div class="flexdates-report-progress-circle col-md-6">
+      '.$grade_graph.'
+    </div>
+    <div class="col-md-6">
+      '.$progress_counts.'
+    </div>
+  </div>'.
 #<div id="flexdates-report-toggle-tasks-container">
 #  <a href="#" id="flexdates-report-show-skills">Show Skills</a>
 #</div>
-$mods.'
+  $mods.'
 </div>';
             } else{
                 $text = get_string('coursenottracked','block_flexdates_report');

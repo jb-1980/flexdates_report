@@ -1,21 +1,25 @@
-.flexdates-report-progress-container{
-  padding:3px;
+.flexdates-report-progress-circle{
+  text-align:center;
+  width:210px;
+  height:210px;
 }
 
-.flexdates-report-progress-circle{
-  margin:auto;
-  text-align:center;
+.flexdates-report-task-levels{
+  padding:25% 0px;
+  display:table;
 }
 
 .flexdates-report-task-level-row{
   padding:2px;
+  display:table-row;
 }
 
 .flexdates-report-progress-box{
-  color:#FDFDFD;
+  color:transparent;
   width:14px;
   height:14px;
   display:inline-block;
+  vertical-align:middle;
 }
 
 .flexdates-report-progress-cell{
@@ -26,6 +30,10 @@
   float:left;
   border:1px solid #FFF;
   border-width:0 1.5px 1px 0;
+}
+
+.flexdates-report-progress-data-container{
+  height:220px;
 }
 
 .flexdates-report-progress-row{
